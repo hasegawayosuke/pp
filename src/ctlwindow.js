@@ -11,7 +11,12 @@ const enumCameras = async () => {
       height: 720
     }
   }
-  const stream = await navigator.mediaDevices.getUserMedia(constraints)
+  let stream
+  try {
+    stream = await navigator.mediaDevices.getUserMedia(constraints)
+  } catch (e) {
+    stream = null
+  }
   const devices = await navigator.mediaDevices.enumerateDevices()
   const elm = document.getElementById('camera')
   devices.forEach(device => {
@@ -22,7 +27,7 @@ const enumCameras = async () => {
       elm.appendChild(opt)
     }
   })
-  stream.getTracks().forEach(track => track.stop())
+  if (stream) stream.getTracks().forEach(track => track.stop())
 }
 
 const timer = (function () {
