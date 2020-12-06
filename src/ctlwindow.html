@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<script src="ctlwindow.js"></script>
+<style>
+#elapsed-reset {
+  padding: 0.1em;
+}
+#elapsed-reset:hover {
+  cursor: default;
+  background-color: silver;
+}
+.ct:hover {
+  cursor: default;
+}
+</style>
+<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+</head>
+<body>
+  <div>
+    <span id="elapsed-reset">&#x2b6e;</span> <span id="elapsed" class="ct">00:00:00</span><span class="ct"> &#x1f557;</span></span><span id="now" class="ct">00:00:00</span> 
+    <button id="prev-page"> &lt; </button>
+    <button id="next-page"> &gt; </button>
+    <input type="text" style="width:2em" id="page" value="1"><span class="ct"> / </span><span id="numPages" class="ct"></span> <button id="jump">Jump</button>
+  </div>
+  <hr>
+  <div>
+    <select id="camera">
+    </select>
+  </div>
+  <div>
+    <input type="radio" id="v1" name="v" value="none" checked><label for="v1">スライドのみ</label>
+    <input type="radio" id="v2" name="v" value="superpose"><label for="v2">スライド+カメラ</label>
+    <input type="radio" id="v3" name="v" value="camera-only"><label for="v3">カメラのみ</label>
+  </div>
+  <hr>
+  <div>
+    <span class="ct">ノート</span>
+    <textarea style="width: 98%; height: 5em" id="note">
+
+    </textarea>
+  </div>
+</body>
+</html>

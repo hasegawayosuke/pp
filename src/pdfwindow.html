@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="../node_modules/pdfjs-dist/build/pdf.js"></script>
+<script src="pdfwindow.js"></script>
+<style>
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  cursor: url(./dot.png), default;
+}
+
+.frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.grip {
+  cursor: grab;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  background-color: transparent;
+  width: 100%;
+  height: 24px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-app-region: drag;
+}
+
+.pointer {
+  cursor: url(./pointer.png), grab;
+}
+
+</style>
+<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+</head>
+<body>
+<div id="play-frame" class="frame">
+  <div id="camera-container" style="z-index: 1; position: fixed;">
+    <video id="camera"></video>
+  </div>
+  <div id="pdf-container" style="margin: 0px; padding: 0px; overflow: hidden; z-index: 0">
+    <canvas id="pdf-canvas" style="margin: 0px"></canvas>
+  </div>
+</div>
+<div class="grip"></div>
+</body>
+</html>
