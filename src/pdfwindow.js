@@ -154,3 +154,17 @@ window.addEventListener('click', (evt) => {
     showPage()
   }
 }, false)
+
+window.addEventListener('keyup', (evt) => {
+  if (['ArrowLeft', 'ArrowUp', 'p', 'PageUp', 'Backspace'].indexOf(evt.key) >= 0) {
+    if (pageNo >= 2) {
+      pageNo--
+    }
+    showPage()
+  } else if (['ArrowRight', 'ArrowDown', 'n', ' ', 'PageDown', 'Enter'].indexOf(evt.key) >= 0) {
+    if (pageNo <= pdf.numPages - 1) {
+      pageNo++
+    }
+    showPage()
+  }
+}, false)

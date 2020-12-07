@@ -111,3 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, false)
 }, false)
+
+window.addEventListener('keyup', (evt) => {
+  if (['ArrowLeft', 'ArrowUp', 'p', 'PageUp', 'Backspace'].indexOf(evt.key) >= 0) {
+    window.electron.sendMessage({ msg: 'page', absolute: false, value: -1 })
+  } else if (['ArrowRight', 'ArrowDown', 'n', ' ', 'PageDown', 'Enter'].indexOf(evt.key) >= 0) {
+    window.electron.sendMessage({ msg: 'page', absolute: false, value: 1 })
+  }
+}, false)
