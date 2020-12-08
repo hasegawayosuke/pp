@@ -6,7 +6,7 @@ const config = require('./config.json')
 
 const parseOption = (argv) => {
   if (argv === undefined) argv = process.argv
-  if (path.basename(argv[0]).startsWith('electron')) {
+  if (path.basename(argv[0]).toLowerCase().startsWith('electron')) {
     argv = argv.slice(2)
   } else {
     argv = argv.slice(1)
