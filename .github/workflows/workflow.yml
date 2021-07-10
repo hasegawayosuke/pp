@@ -20,7 +20,5 @@ jobs:
             node-
       - name: npm ci
         run: npm ci
-      - name: Test
-        run: npm test
       - name: Dist
         run: npm run-script dist
