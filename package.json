@@ -29,6 +29,7 @@
     "appId": "marineotter.pp",
     "win": {
       "target": "zip"
-    }
+    },
+    "artifactName": "pp-release.${ext}"
   }
 }
