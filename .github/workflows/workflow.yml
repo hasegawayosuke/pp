@@ -5,8 +5,7 @@ on:
 jobs:
   run:
     name: Run
-    using: 'docker'
-    image: 'electronuserland/builder:wine'
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2.0.0
       - uses: actions/cache@v2
