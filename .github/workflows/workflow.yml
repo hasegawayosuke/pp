@@ -25,6 +25,5 @@ jobs:
       - name: Upload package
         uses: actions/upload-artifact@v2
         with:
-          name: package-win
+          name: pp-package-win
           path: dist/pp-package.zip
-          
