@@ -106,6 +106,7 @@ const createPdfWindow = () => {
     x: config.pdfwindow.left,
     y: config.pdfwindow.top,
     frame: false,
+    resizable: false,
     webPreferences: {
       contextIsolation: true,
       preload: path.resolve(__dirname, 'src', 'preload-pdfwindow.js')
