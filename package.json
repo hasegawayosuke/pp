@@ -30,6 +30,6 @@
     "win": {
       "target": "zip"
     },
-    "artifactName": "pp-release.${ext}"
+    "artifactName": "pp-package.${ext}"
   }
 }
