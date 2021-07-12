@@ -2,7 +2,7 @@
 const { app, BrowserWindow, ipcMain, Menu, dialog } = require('electron')
 const fs = require('fs')
 const path = require('path')
-const config = require('./config.json')
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
 const parseOption = (argv) => {
   if (argv === undefined) argv = process.argv

@@ -27,6 +27,9 @@
   },
   "build": {
     "appId": "marineotter.pp",
+    "extraFiles": [
+      "config.json"
+    ],
     "win": {
       "target": "zip"
     },
